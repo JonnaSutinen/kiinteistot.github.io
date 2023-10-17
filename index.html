@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+        <ul class="menu">
+            <li class="dropdown">
+                <a href="#" onclick="toggleDropdown(event)">Valikko ↓</a>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="apartments.html">Apartments</a>
+                    <a href="highend.html">High-End</a>
+                    <a href="lowtier.html">Low-Tier</a>
+                    <a href="mansion.html">Mansion</a>
+                    <a href="midtier.html">Mid-Tier</a>
+                    <a href="shittier.html">Shittier</a>
+                    <a href="trailer.html">Trailer</a>
+                    <a href="varastot.html">Varastot</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="left-pane">
+            <!-- Kuva kartasta vasemmalle -->
+            <img src="img/kartta.png" alt="Kartta" style="max-width: 100%; height: auto;">
+        <p>Toimistomme sijaitsee tässä osoitteessa. Tervetuloa!</p>
+        </div>
+        <div class="right-pane">
+            <!-- Työntekijälista oikealle -->
+            <h2>Työntekijät</h2>
+            <ul class="employee-list">
+                <li>
+                    <img src="img/tyontekija.png" alt="Työntekijä 1">
+                    <p>Nimi: Matti Meikäläinen</p>
+                    <p>Puhelin: 123-456-7890</p>
+                </li>
+                <li>
+                    <img src="img/tyontekija2.jpg" alt="Työntekijä 2">
+                    <p>Nimi: Työntekijä 2</p>
+                    <p>Puhelin: 987-654-3210</p>
+                </li>
+                <!-- Lisää muita työntekijöitä tarpeen mukaan -->
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

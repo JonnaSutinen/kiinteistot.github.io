@@ -1,0 +1,117 @@
+/* Resetoidaan ulkoasun oletusarvot */
+body, h1, h2, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333; /* Harmaa tausta */
+    color: #fff;
+    max-width: 100%; /* Maksimileveys sivustolle */
+    overflow-x: hidden; /* Estetään vaakasuora vieritys pienillä näytöillä */
+}
+
+/* Navigaatiopalkin tyyli */
+.navbar {
+    background-color: #747272;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Muutettu justify-content vasemmalle */
+    padding: 10px;
+}
+
+.navbar .logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Sisältöalueen tyyli */
+.content {
+    display: flex;
+    flex-wrap: wrap; /* Rivien vaihto pienillä näytöillä */
+    padding: 20px;
+}
+
+/* Vasemman ja oikean osan tyyli */
+.left-pane {
+    width: 100%; /* Oletusarvo kaikille näytöille */
+    max-width: 600px; /* Maksimileveys, jotta kuva ei ole liian suuri */
+    margin: 0 auto; /* Keskitetään kuva */
+}
+
+.right-pane {
+    width: 100%; /* Oletusarvo kaikille näytöille */
+    max-width: 300px; /* Maksimileveys, jotta lista ei ole liian leveä */
+    margin: 0 auto; /* Keskitetään lista */
+}
+
+/* Työntekijälistan tyyli */
+.employee-list {
+    list-style: none;
+    padding: 0;
+}
+
+.employee-list li {
+    margin-bottom: 20px; /* Lisätty väliä työntekijöiden välille */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown-contentin tyyli */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000; /* Musta tausta */
+    color: #fff; /* Valkea teksti */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    text-align: left;
+}
+
+/* Näytä dropdown, kun hiiri on sen päällä */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Valikon nimen tyyli */
+.dropdown .dropdown-name {
+    color: #fff; /* Valkea teksti */
+}
+
+/* Valikon linkkien tyyli */
+.dropdown-content a {
+    display: block; /* Asetetaan linkit pystyyn allekkain */
+    color: #fff; /* Valkea teksti */
+    text-decoration: none; /* Poistetaan linkin alleviivaus */
+}
+
+/* Valikon linkkien tyyli kun hiiren päällä */
+.dropdown-content a:hover {
+    color: #ff00ff; /* Voit vaihtaa haluamaasi väriin (liila) */
+}
+
+a {
+    color: #fff !important; /* Valkea teksti */
+    text-decoration: none; /* Poistetaan linkin alleviivaus */
+}
+
+
+
+/* Media Query mobiililaitteille */
+@media (max-width: 768px) {
+    /* Määritellään tyyliä pienille näytöille */
+    .content {
+        flex-direction: column; /* Asetetaan pystysuora asettelu */
+    }
+
+    .left-pane, .right-pane {
+        width: 100%; /* Koko näytön leveydelle */
+        max-width: none; /* Poistetaan maksimileveys */
+    }
+}
